@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WildTrail Adventures</title>
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">W</div>
+        <div class="brand-text">WildTrail Adventures</div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="#services">Transfers</a>
+        <a href="#tours">Tours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <select id="langSelect" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <button id="bookBtn" class="btn btn-primary">Book a Tour</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <p class="eyebrow">/Adventure Outdoor Tours</p>
+          <h1 id="heroTitle">WildTrail<br>Adventures</h1>
+          <p id="heroSub" class="muted">The most popular and trusted travel agency in Greece</p>
+          <a href="#tours" class="btn btn-ghost">Explore destinations →</a>
+        </div>
+
+        <div class="hero-image">
+          <!-- local file path inserted -->
+          <img src="/mnt/data/bde19f57f62f19d0c912ddca1b92bb77.jpg" alt="Greek landscape">
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us / About -->
+    <section id="about" class="card-grid">
+      <div class="card media">
+        <div class="media-image">
+          <img src="" alt="landscape placeholder">
+        </div>
+        <div class="media-body">
+          <small class="muted">ABOUT US</small>
+          <h2>The Highest Level of Comfort, Convenience and Service</h2>
+          <p>At Armonia Excursions we combine premium service with attention to detail. Whether it's a private journey tailored just for you, a shared group experience, or a seamless transfer— we take care of everything so you can enjoy every moment.</p>
+          <a href="#contact" class="link">More about us →</a>
+        </div>
+      </div>
+
+      <div class="stacked-cards">
+        <div class="mini-card">
+          <h3>Professional team</h3>
+          <p>With years of experience in tourism, making sure you enjoy every moment.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Flexibility</h3>
+          <p>From historic landmarks to airports — we take you where you need to go.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2>What we offer?</h2>
+      <p class="muted">From private tours to accessible transfers — we have the perfect option for you.</p>
+
+      <div class="services-grid">
+        <aside class="service-tabs" role="tablist">
+          <button class="tab active" data-service="private">Private Tours</button>
+          <button class="tab" data-service="scheduled">Scheduled Tours</button>
+          <button class="tab" data-service="transfers">Transfers</button>
+          <button class="tab" data-service="access">Wheelchair Accessibility</button>
+        </aside>
+
+        <div class="service-panel" id="servicePanel">
+          <div class="service-card">
+            <img src="" alt="service image">
+            <div>
+              <h3 id="serviceTitle">Tailored Private Tours in Mercedes Vito</h3>
+              <p id="serviceText">Enjoy a personalized journey in our Mercedes Vito (9-seater). These tours offer complete flexibility — visit as many or as few places as you wish.</p>
+              <a href="#contact" class="link">Explore tours →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours preview -->
+    <section id="tours" class="tours">
+      <h2>Popular Tours</h2>
+      <div class="tours-grid">
+        <article class="tour">
+          <div class="tour-image" style="background-image:url('/mnt/data/bde19f57f62f19d0c912ddca1b92bb77.jpg')"></div>
+          <div class="tour-body">
+            <h3>Temple & Coast Private Day</h3>
+            <p class="muted">Private drive, local guide, light lunch included.</p>
+            <div class="tour-actions">
+              <button class="btn btn-outline book-now" data-tour="Temple & Coast">Book</button>
+              <button class="btn btn-ghost view-more">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour">
+          <div class="tour-image" style="background-image:url('/mnt/data/bde19f57f62f19d0c912ddca1b92bb77.jpg')"></div>
+          <div class="tour-body">
+            <h3>Historic Sites & Wine</h3>
+            <p class="muted">Guided tasting and cultural stops.</p>
+            <div class="tour-actions">
+              <button class="btn btn-outline book-now" data-tour="Historic & Wine">Book</button>
+              <button class="btn btn-ghost view-more">Details</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <div>
+          <h2>Get in touch</h2>
+          <p class="muted">Tell us about your ideal trip and we'll craft it for you.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" aria-label="Contact form">
+          <input type="text" id="name" placeholder="Full name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <select id="subject">
+            <option>Private tour</option>
+            <option>Transfer</option>
+            <option>Group booking</option>
+          </select>
+          <textarea id="message" rows="4" placeholder="Message"></textarea>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Armonia Excursions</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

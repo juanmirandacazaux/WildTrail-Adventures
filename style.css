@@ -1,0 +1,90 @@
+:root{
+  --bg:#e9e6da;
+  --card:#f6f3ea;
+  --accent:#2f4d36;
+  --muted:#63706a;
+  --radius:18px;
+  --gap:22px;
+  --maxwidth:1200px;
+  --shadow: 0 18px 40px rgba(17,20,12,0.06);
+  font-family: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--accent);
+  -webkit-font-smoothing:antialiased;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Header */
+.site-header{width:100%;background:transparent; padding:22px 24px 6px;}
+.header-inner{max-width:var(--maxwidth);width:100%;margin:auto;display:flex;align-items:center;gap:20px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);box-shadow:var(--shadow)}
+.brand-text{font-weight:700;letter-spacing:1px}
+.main-nav a{color:var(--accent);text-decoration:none;margin:0 12px;font-weight:500}
+.header-controls{display:flex;align-items:center;gap:12px}
+#langSelect{padding:8px;border-radius:12px;border:1px solid rgba(0,0,0,0.06);background:#f7f5ef}
+
+/* Hero */
+.hero{width:100%;display:flex;justify-content:center;padding:18px 0 32px}
+.hero-inner{max-width:var(--maxwidth);width:100%;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;background:var(--card);padding:36px;border-radius:20px;box-shadow:var(--shadow)}
+.eyebrow{color:var(--muted);margin:0 0 8px}
+#heroTitle{font-size:56px;line-height:0.95;margin:0;color:var(--accent);font-weight:800}
+.muted{color:var(--muted)}
+.hero-image img{width:100%;height:260px;object-fit:cover;border-radius:12px;display:block}
+
+/* Cards / About */
+.card-grid{max-width:var(--maxwidth);width:100%;display:grid;grid-template-columns:2fr 1fr;gap:22px;margin:28px 0;padding:0 18px}
+.card{background:#fff;padding:22px;border-radius:14px;box-shadow:0 8px 20px rgba(7,10,8,0.04)}
+.media{display:flex;gap:22px;align-items:flex-start}
+.media-image img{width:220px;height:200px;object-fit:cover;border-radius:12px;background:#ddd}
+.stacked-cards{display:flex;flex-direction:column;gap:18px}
+.mini-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 14px rgba(7,10,8,0.03)}
+
+/* Services */
+.services{max-width:var(--maxwidth);width:100%;padding:30px 18px}
+.services-grid{display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:start}
+.service-tabs{display:flex;flex-direction:column;gap:12px}
+.tab{background:#f2efe6;border-radius:12px;padding:12px;text-align:left;border:0;cursor:pointer}
+.tab.active{background:var(--accent);color:#fff}
+.service-panel .service-card{display:flex;gap:18px;background:#fff;padding:18px;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,0.04)}
+.service-card img{width:220px;height:150px;object-fit:cover;border-radius:10px;background:#eee}
+
+/* Tours grid */
+.tours{max-width:var(--maxwidth);width:100%;padding:30px 18px}
+.tours-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.tour{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,0.04);display:flex;flex-direction:column}
+.tour-image{height:160px;background-size:cover;background-position:center}
+.tour-body{padding:14px}
+.tour-actions{display:flex;gap:10px;margin-top:12px}
+
+/* Contact */
+.contact{max-width:var(--maxwidth);width:100%;padding:40px 18px}
+.contact-inner{display:flex;gap:28px;align-items:flex-start;justify-content:space-between}
+.contact-form{display:flex;flex-direction:column;gap:12px;width:420px;background:#fff;padding:18px;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,0.04)}
+.contact-form input,.contact-form textarea,.contact-form select{padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+
+/* Buttons */
+.btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 12px}
+
+/* Footer */
+.site-footer{max-width:var(--maxwidth);width:100%;padding:22px;text-align:center;color:var(--muted)}
+
+/* Utilities */
+.link{color:var(--accent);text-decoration:none;font-weight:600}
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .tours-grid{grid-template-columns:1fr}
+  .contact-inner{flex-direction:column;align-items:stretch}
+}
