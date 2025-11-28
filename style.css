@@ -22,7 +22,14 @@ body{
   align-items:center;
 }
 
+
+
 /* Header */
+
+.imageLogo {
+    width: 90%;
+}
+
 .site-header{width:100%;background:transparent; padding:22px 24px 6px;}
 .header-inner{max-width:var(--maxwidth);width:100%;margin:auto;display:flex;align-items:center;gap:20px;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px}
