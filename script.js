@@ -3,19 +3,19 @@
 const texts = {
   en: {
     heroTitle: "WildTrail\nAdventures",
-    heroSub: "The most popular and trusted travel agency in Greece",
+    heroSub: "The most popular and trusted travel agency around the world",
     serviceTitle: "Tailored Private Tours in Mercedes Vito",
     serviceText: "Enjoy a personalized journey in our Mercedes Vito (9-seater). These tours offer complete flexibility — visit as many or as few places as you wish."
   },
   es: {
     heroTitle: "WildTrail\nAdventures",
-    heroSub: "La agencia de viajes más popular y confiable en Grecia",
+    heroSub: "La agencia de viajes más popular y confiable en todo el mundo",
     serviceTitle: "Tours Privados a Medida en Mercedes Vito",
     serviceText: "Disfruta de un viaje personalizado en nuestro Mercedes Vito (9 plazas). Estos tours ofrecen total flexibilidad — visita los lugares que quieras."
   },
   fr: {
     heroTitle: "WildTrail\nAdventures",
-    heroSub: "L'agence de voyage la plus populaire et fiable en Grèce",
+    heroSub: "L'agence de voyage la plus populaire et fiable en tout le monde",
     serviceTitle: "Visites Privées sur Mesure en Mercedes Vito",
     serviceText: "Profitez d'un voyage personnalisé dans notre Mercedes Vito (9 places). Ces excursions offrent une flexibilité complète."
   }
